@@ -1,0 +1,161 @@
+@font-face {
+  font-family: 'Recoleta';
+  src: url('./fonts/Recoleta-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@keyframes scroll-text {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-5%);
+  }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    background-color: white;
+}
+
+.poppi-header {
+    background-color: #FF2063;
+    padding: 24px 0;
+    top: 0;
+    border-radius:  0 0 20px 20px;
+
+}
+
+.logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo-img {
+    height: 30px;
+    object-fit: contain;
+}
+
+.poppi-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.nav-left {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-left a {
+    font-family: 'Golos Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    text-decoration: none;
+    color: #FFF200;
+    font-size: 14px;
+}
+
+.nav-left a:hover {
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: #FFF200;
+}
+
+/* Video */
+.poppi-vid {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    margin: 0;
+    overflow: hidden;
+}
+
+.section-video {
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+}
+
+/* Banner */
+.banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  bottom: 0;
+  width: 100%;
+  background: #FFF200;
+  overflow: hidden;
+  z-index: 100;
+  height: 30px;
+  border-radius: 5px 5px;
+}
+
+.banner-wrap {
+    padding: 0 5px; 
+    width: 100%;
+    box-sizing: border-box;
+}
+.banner-track {
+  display: flex;
+  animation: scroll-text 5s linear infinite;
+}
+
+.banner-track span {
+  white-space: nowrap;
+  font-size: 14px;
+  padding: 0 20px;
+  font-family: 'Golos Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  color: #ff0099;
+}
+
+/* 3 Tier Photo */
+.tier-photo {
+    padding: 5px 5px;
+}
+
+.photo-wrapper {
+    display: flex;
+    gap: 5px;
+}
+
+.poppi-photo {
+    max-height: 400px;
+    border-radius: 10px;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    flex: 1;
+}
+
+/* Photo with all drinks */
+.poppidrinks-section {
+    padding: 5px;
+}
+
+.poppi-drinks-img {
+    display: block;
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* ---------------------- */
+/* MEDIA DEVICES */
+@media (max-width: 768px) {
+    .poppi-photo {
+        max-height: 200px;
+    }
+}
