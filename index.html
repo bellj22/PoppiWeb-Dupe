@@ -8,6 +8,7 @@
     <!-- LINKS & FONTS-->
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@500;700&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 
 
 </head>
@@ -61,5 +62,142 @@
     <section class="poppidrinks-section">
         <img src="./img/poppidrinkscopy.jpg" alt="Poppi drinks All" class="poppi-drinks-img" />
     </section>
+
+    <section class="drinknow">
+        <h2>the future of soda is now!</h2>
+        <p>5g sugar. ingredients you can love. made with prebiotics.</p>
+    </section>
+
+    <section class="drinks-selection">
+        <div class="carousel-container">
+            <button class="carousel-btn prev">
+                <span class="material-icons">chevron_left</span>
+            </button>
+
+            <div class="photos-carousel">
+                <div class="carousel" id="carousel">
+                    <a href="#"><img src="./img/g-poppi1.jpg" data-hover="./img/grape-trans.png" alt="Grape Poppi"></a>
+                    <a href="#"><img src="./img/ll-poppi6.jpg" data-hover ="./img/ll-trans.png" alt="Lemon Lime Poppi"></a>
+                    <a href="#"><img src="./img/o-poppi5.jpg" data-hover="./img/o-trans.png" alt="Orange Poppi"></a>
+                    <a href="#"><img src="./img/rr-poppi5.jpg" data-hover="./img/rr-trans.png" alt="Raspberry Rose Poppi"></a>
+                    <a href="#"><img src="./img/punchpoppi-p7.jpg" data-hover="./img/punch-trans.png" alt="Punch Poppi"></a>
+                    <a href="#"><img src="./img/sl-poppi3.jpg" data-hover="./img/sl-trans.png" alt="Strawberry Lemonade Poppi"></a>
+                    <a href="#"><img src="./img/wb-poppi2.jpg" data-hover="./img/wb-trans.png" alt="Wild Berry Poppi"></a>
+                    <a href="#"><img src="./img/gl-poppi3.jpg" data-hover="./img/gl-trans.png" alt="Ginger Lime Poppi"></a>
+                    <a href="#"><img src="./img/cc-poppi6.jpg" data-hover="./img/cc-trans.png" alt="Cherry Cola Poppi"></a>
+                    <a href="#"><img src="./img/docpoppi-p1.jpg" data-hover="./img/doc-trans.png" alt="Doc-Pop Poppi"></a>
+                </div>
+            </div>
+
+            <button class="carousel-btn next">
+                <span class="material-icons">chevron_right</span>
+            </button>
+        </div>
+        <div class="shopnow-wrap">
+            <a href="#" class="shopnow-btn">shop now</a>
+        </div>
+    </section>
+    <!-- Script for drinks-selection-->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const carousel = document.querySelector(".photos-carousel");
+            const btnNext = document.querySelector(".carousel-btn.next");
+            const btnPrev = document.querySelector(".carousel-btn.prev");
+            const scrollingAmt = 220;
+
+            btnNext.addEventListener("click", () => {
+            carousel.scrollBy({ left: scrollingAmt, behavior: "smooth" });
+            });
+
+            btnPrev.addEventListener("click", () => {
+            carousel.scrollBy({ left: -scrollingAmt, behavior: "smooth" });
+            });
+        });
+    </script>
+    <!-- Script for changing photos-->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const carouselImages = document.querySelectorAll(".carousel img");
+
+            carouselImages.forEach((img) => {
+            const originalSrc = img.src;
+            const hoverSrc = img.getAttribute("data-hover");
+
+            img.style.transition = "opacity 0.3s ease";
+
+            img.addEventListener("mouseenter", () => {
+                img.style.opacity = "0";
+                setTimeout(() => {
+                img.src = hoverSrc;
+                img.style.opacity = "1";
+                }, 150);
+            });
+
+            img.addEventListener("mouseleave", () => {
+                img.style.opacity = "0";
+                setTimeout(() => {
+                img.src = originalSrc;
+                img.style.opacity = "1";
+                }, 150);
+            });
+            });
+        });
+    </script>
+
+    <section class="taller-drink">
+        <img src="./img/tallerd.jpg" alt="taller size poppi" class="resize-img">
+
+        <div class="drink-info">
+            <div class="box">
+                <h3>Wanna Get Juicy?</h3>
+                <p>ever finish a poppi and wish there was more to sip?
+                   shop our new, bigger 16oz cans and get more sips!
+                    #drinkpoppi
+                </p>
+                <a href="#" class="shopnow-btn tall-btn">buy now</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="tier-photo">
+        <div class="photo-wrapper">
+            <img src="./img/poppi p6.jpg" alt="New Punch Poppi" class="poppi-photo">
+            <img src="./img/poppidrinks2.jpg" alt="Sip and Scan" class="poppi-photo">
+            <img src="./img/poppidrink7.jpg" alt="Poppi Drinks" class="poppi-photo">
+        </div>
+    </section>
+    <a href="https://www.instagram.com/drinkpoppi" target="_blank" class="banner-link">
+        <div class="new-banner-wrap">
+            <div class="socials-banner">
+                <div class="soc-banner-track scroll-left">
+                    <span>follow us on instagram ✨</span>
+                    <span>follow us on instagram ✨</span>
+                    <span>follow us on instagram ✨</span>
+                    <span>follow us on instagram✨</span>
+                    <span>follow us on instagram ✨</span>
+                    <span>follow us on instagram ✨</span>
+                    <span>follow us on instagram ✨</span>
+                    <span>follow us on instagram✨</span>
+                </div>
+            </div>
+        </div>
+    </a>
+    <a href="https://www.tiktok.com/@drinkpoppi" target="_blank" class="banner-link">
+        <div class="new-banner-wrap">
+            <div class="socials-banner" style="background: #00aeef;">
+                <div class="soc-banner-track scroll-right">
+                    <span>✨follow us on tiktok ✨</span>
+                    <span>✨follow us on tiktok ✨</span>
+                    <span>✨follow us on tiktok ✨</span>
+                    <span>✨follow us on tiktok</span>
+                    <span>✨follow us on tiktok ✨</span>
+                    <span>✨follow us on tiktok ✨</span>
+                    <span>✨follow us on tiktok ✨</span>
+                    <span>✨follow us on tiktok</span>
+                </div>
+            </div>
+        </div>
+    </a>
+
 </body>
 </html>
