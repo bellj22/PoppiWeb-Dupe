@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    background-color: #700058;
+}
+
+.poppi-header {
+    background-color: #700058;
+    padding: 24px 0;
+    top: 0;
+    border-radius:  0 0 20px 20px;
+    box-shadow: 0 10px 30px -10px #fd303a;
+}
+
+
+.logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo-img {
+    height: 30px;
+    object-fit: contain;
+}
+
+.poppi-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.nav-left {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-left a {
+    font-family: 'Golos Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    text-decoration: none;
+    color: #fd303a;
+    font-size: 14px;
+}
+
+.nav-left a:hover {
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: #fd303a;
+}
+
+/* Cherry Cola Profile Section */
+
+.cherry-cola {
+    display: flex;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 10px 50px;
+    align-items: flex-start;
+}
+.cc-left {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 0 0 410px;
+}
+.large-img img{
+    width: 100%;
+    max-height: 700px;
+    max-width: 500px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+.small-img {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.small-img img {
+    border-radius: 12px;
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+}
+.cc-right {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 100px;
+}
+.soda-name {
+    font-size: 50px;
+    color: #fd303a;
+    font-family: 'Baloo 2',sans-serif;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.soda-description {
+    font-size: 18px;
+    font-family: 'Golos Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #fd303a;
+    text-align: center;
+    align-items: center;
+    line-height: 1.5;
+}
+
+.shopnow-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Golos Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    padding: 0 60px;
+    line-height: 20px;
+    min-width: 100px;
+    height: 50px;
+    text-decoration: none;
+
+    color:#fd303a;
+    background-color:#700058;
+    border: 1.66667px solid #fd303a;
+    border-radius: 40px;
+
+    box-shadow: 5px 5px 0 0 #fd303a;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+
+    transition: background-color 0.25s cubic-bezier(0.42, 0, 0.58, 1),
+                color 0.25s cubic-bezier(0.42, 0, 0.58, 1),
+                box-shadow 0.25s cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.shopnow-btn:hover {
+  background-color:#fd303a;
+  color:#700058;
+  box-shadow: none;
+}
+
+.shopnow-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.soda-info {
+    width: 100%;
+    overflow: hidden;
+}
+.middle-section {
+    background-color:white;
+    padding: 90px;
+    margin-top: -21.9px;
+}
+
+/* Flavors Choice Selection */
+
+.arrow {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+}
+.flavor-icons {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    margin-top: 20px;
+}
+.flavor-icons a {
+    display: flex;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    align-items: center;
+    background-color: #e5fc11;
+    border-radius: 5px;
+    
+}
+.flavor-icons a.active {
+  border: 1.5px solid #fd303a;   /* red border on the active box */
+}
+.flavor-icons img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+/* Flavor icons colors */
+.flavor-icons a:nth-child(1) {background-color:#8725c3;}
+.flavor-icons a:nth-child(2) {background-color:#137c21;}
+.flavor-icons a:nth-child(3) {background-color:#eb5600;}
+.flavor-icons a:nth-child(4) {background-color:#ffc7df;}
+.flavor-icons a:nth-child(5) {background-color:white;}
+.flavor-icons a:nth-child(6) {background-color:#ec008c;}
+.flavor-icons a:nth-child(7) {background-color:#00aeef;}
+.flavor-icons a:nth-child(8) {background-color:#e5fc0f;}
+.flavor-icons a:nth-child(9) {background-color:#700058;}
+.flavor-icons a:nth-child(10) {background-color:#f66ff8;}
+

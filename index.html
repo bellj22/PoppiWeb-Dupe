@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" type="image/png" href="./img/poppi logo.png" size="100x100"/>
+    <link rel="icon" type="image/png" href="./img/poppi logo.png" size="100x100"/>
     <title>poppi dupe</title>
     <!-- LINKS & FONTS-->
     <link rel="stylesheet" href="styles.css">
@@ -84,7 +84,7 @@
                     <a href="#"><img src="./img/sl-poppi3.jpg" data-hover="./img/sl-trans.png" alt="Strawberry Lemonade Poppi"></a>
                     <a href="#"><img src="./img/wb-poppi2.jpg" data-hover="./img/wb-trans.png" alt="Wild Berry Poppi"></a>
                     <a href="#"><img src="./img/gl-poppi3.jpg" data-hover="./img/gl-trans.png" alt="Ginger Lime Poppi"></a>
-                    <a href="#"><img src="./img/cc-poppi6.jpg" data-hover="./img/cc-trans.png" alt="Cherry Cola Poppi"></a>
+                    <a href="cherrycola.html"><img src="./img/cc-poppi6.jpg" data-hover="./img/cc-trans.png" alt="Cherry Cola Poppi"></a>
                     <a href="#"><img src="./img/docpoppi-p1.jpg" data-hover="./img/doc-trans.png" alt="Doc-Pop Poppi"></a>
                 </div>
             </div>
@@ -97,52 +97,6 @@
             <a href="#" class="shopnow-btn">shop now</a>
         </div>
     </section>
-    <!-- Script for drinks-selection-->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const carousel = document.querySelector(".photos-carousel");
-            const btnNext = document.querySelector(".carousel-btn.next");
-            const btnPrev = document.querySelector(".carousel-btn.prev");
-            const scrollingAmt = 220;
-
-            btnNext.addEventListener("click", () => {
-            carousel.scrollBy({ left: scrollingAmt, behavior: "smooth" });
-            });
-
-            btnPrev.addEventListener("click", () => {
-            carousel.scrollBy({ left: -scrollingAmt, behavior: "smooth" });
-            });
-        });
-    </script>
-    <!-- Script for changing photos-->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const carouselImages = document.querySelectorAll(".carousel img");
-
-            carouselImages.forEach((img) => {
-            const originalSrc = img.src;
-            const hoverSrc = img.getAttribute("data-hover");
-
-            img.style.transition = "opacity 0.3s ease";
-
-            img.addEventListener("mouseenter", () => {
-                img.style.opacity = "0";
-                setTimeout(() => {
-                img.src = hoverSrc;
-                img.style.opacity = "1";
-                }, 150);
-            });
-
-            img.addEventListener("mouseleave", () => {
-                img.style.opacity = "0";
-                setTimeout(() => {
-                img.src = originalSrc;
-                img.style.opacity = "1";
-                }, 150);
-            });
-            });
-        });
-    </script>
 
     <section class="taller-drink">
         <img src="./img/tallerd.jpg" alt="taller size poppi" class="resize-img">
@@ -199,5 +153,160 @@
         </div>
     </a>
 
+    <!-- Review --> 
+    <section class="review-section">
+        <h2 class="reviews-header">what people <em>really</em>
+            &nbsp;think</h2>
+        <div class="review-photos">
+            <button class="review-btn prev">
+                <span class="material-icons">chevron_left</span>
+            </button>
+
+            <div class="review-card" id="review-card">
+                <h3>LOVE THIS STUFF!</h3>
+                <p>I love all the poppi flavors but the classic ginger lime combo is perfection when done by poppi. Thank you to the creators!</p>
+                <p class="review-writer">- ETZG</p>
+            </div>
+
+            <button class="review-btn next">
+                <span class="material-icons">chevron_right</span>
+            </button>
+        </div>
+        
+        <div class="review-footer">
+            love what you're sipping? <br><a href="#">leave a review</a> and tell us about it!
+        </div>
+    </section>
+
+    <section class="drink-videos">
+        <video autoplay muted loop playsinline class="drinkvid">
+            <source src="./img/drinkvid2.mp4" type="video/mp4">
+            Your Browser Does Not Support This Video.
+        </video>
+        <video autoplay muted loop playsinline class="drinkvid">
+            <source src="./img/drinkvid1.mp4" type="video/mp4">
+            Your Browser Does Not Support This Video.
+        </video>
+        <video autoplay muted loop playsinline class="drinkvid">
+            <source src="./img/drinkvid3.mp4" type="video/mp4">
+            Your Browser Does Not Support This Video.
+        </video>
+    </section>
+
+
+    <!-- Script for drinks-selection-->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const carousel = document.querySelector(".photos-carousel");
+            const btnNext = document.querySelector(".carousel-btn.next");
+            const btnPrev = document.querySelector(".carousel-btn.prev");
+            const scrollingAmt = 220;
+
+            btnNext.addEventListener("click", () => {
+            carousel.scrollBy({ left: scrollingAmt, behavior: "smooth" });
+            });
+
+            btnPrev.addEventListener("click", () => {
+            carousel.scrollBy({ left: -scrollingAmt, behavior: "smooth" });
+            });
+        });
+    </script>
+    <!-- Script for changing photos-->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const carouselImages = document.querySelectorAll(".carousel img");
+
+            carouselImages.forEach((img) => {
+            const originalSrc = img.src;
+            const hoverSrc = img.getAttribute("data-hover");
+
+            img.style.transition = "opacity 0.3s ease";
+
+            img.addEventListener("mouseenter", () => {
+                img.style.opacity = "0";
+                setTimeout(() => {
+                img.src = hoverSrc;
+                img.style.opacity = "1";
+                }, 150);
+            });
+
+            img.addEventListener("mouseleave", () => {
+                img.style.opacity = "0";
+                setTimeout(() => {
+                img.src = originalSrc;
+                img.style.opacity = "1";
+                }, 150);
+            });
+            });
+        });
+    </script>
+    <!-- Script for changeof reviews -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const reviews = [
+                {
+                    title: "LOVE THIS STUFF!",
+                    text: "I love all the poppi flavors but the classic ginger lime combo is perfection when done by poppi. Thank you to the creators!",
+                    writer: "- ETZG",
+                    bgColor: "#E5FC11",
+                    borderColor: "#008CF1"
+                },
+                {
+                    title: "Best Watermelon Soda Everrrrrr",
+                    text: "I am obsessed with poppi! When Watermelon came along i was BLOWN away!! Nice crisp and refreshing the perfect drink!",
+                    writer: "- LivyLove",
+                    bgColor: "#6cff4f",
+                    borderColor: "#f61f6c"
+                },
+                {
+                    title: "Hands down the best drink I've ever had",
+                    text: "Poppi root beer changed my life!! Ever since the first time I had it I've been hooked!! The fact that it tastes so sweet yet is only 5g of sugar always amazes me!",
+                    writer: "- NicholeG",
+                    bgColor: "#ffd8a5",
+                    borderColor: "#823c27"
+                },
+                {
+                    title: "Orange Dream!",
+                    text: "If you liked the orange creamsicle ice cream pops as a child this flavor will bring you back to a summer day. It's incredibly refreshign! One of my favorites!",
+                    writer: "- JenM",
+                    bgColor: "#ffe6d0",
+                    borderColor: "#e15507"
+                },
+                {
+                    title: "Best poppi Flavor!",
+                    text: "I am in LOVE with poppi sodas bit I find the cherry limeade flavor to be simply irresistable! It has just the right amount of sweetness bubbles and cherry-lime combo in every sip. Worth every penny!",
+                    writer: "- jinxthechemist",
+                    bgColor: "#d10018",
+                    borderColor: "#e5fc11"
+                }
+            ];
+            let currentI = 0;
+            const card = document.getElementById("review-card");
+
+            function updateReviews() {
+                const review = reviews[currentI];
+                card.querySelector("h3").textContent = review.title;
+                card.querySelector("p").textContent = review.text;
+                card.querySelector(".review-writer").textContent = review.writer;
+
+                card.style.backgroundColor = review.bgColor;
+                card.style.borderColor = review.borderColor;
+                card.querySelector("h3").style.color = review.borderColor;
+                card.style.color = review.borderColor;
+            }
+
+            document.querySelector(".review-btn.next").addEventListener("click", function (){
+                currentI = (currentI + 1) % reviews.length;
+                updateReviews();
+            });
+
+            document.querySelector(".review-btn.prev").addEventListener("click", function() {
+                currentI = (currentI - 1 + reviews.length) % reviews.length;
+                updateReviews();
+            });
+
+            updateReviews();
+        });
+    </script>
 </body>
 </html>

@@ -300,8 +300,8 @@ html, body {
     display: flex;
     align-items: center;
     gap: 40px;
-    max-width: 1200px;
-    margin: 40px auto;
+    max-width: 1250px;
+    margin: 20px auto;
     padding: 20px;
     background: linear-gradient(to bottom left, #EC008C 0%, #FFF200 100%);
     border-radius: 12px;
@@ -372,7 +372,7 @@ html, body {
     align-items: center;
     bottom: 0;
     width: 100%;
-    background: #ff0099;
+    background:#FF2063;
     overflow: hidden;
     z-index: 100;
     height: 30px;
@@ -404,6 +404,96 @@ html, body {
   text-decoration: none;
 }
 
+/* REVIEW SECTION */
+.review-section {
+    padding: 30px 20px;
+    width: 600px;
+    /*margin: 5px 5px; */
+    margin: 20px auto;
+    text-align: center;
+    background-color: #FF0099;
+    font-family: 'Golos Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    border-radius: 12px;
+}
+
+.reviews-header {
+    margin-bottom: 20px;
+    font-family: 'Recoleta';
+    font-size: 25px;
+    color: #FFF200;
+}
+
+.review-photos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.review-card {
+    background-color: #E5FC11;
+    border: 3px solid #008CF1;
+    border-radius: 16px;
+    padding: 20px;
+    max-width: 500px;
+    color: #008CF1;
+    font-size: 14px;
+    text-align: left;
+}
+
+.review-card h3 {
+    font-family: 'Recoleta';
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #008CF1;
+    text-decoration: underline;
+}
+
+.review-writer {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.review-btn {
+    border: none;
+    background: none;
+    color: #FFF200;
+    cursor: pointer;
+    font-size: 32px;
+}
+
+.review-footer {
+    margin-top: 15px;
+    color: #FFF200;
+    font-size: 12px;
+}
+.review-footer a {
+    color: #fff200;
+    text-decoration: underline;
+}
+.review-footer a:hover {
+    text-decoration-style: wavy;
+}
+
+/* Videos Section */
+.drink-videos {
+    background-color: #E5FC11;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 0 5px;
+    border-radius: 5px;
+}
+
+.drinkvid {
+    width: 400px;
+    max-width: 100%;
+    border-radius: 12px;
+    height: 600px;
+    object-fit: cover;
+}
 
 /* ---------------------- */
 /* MEDIA DEVICES */
@@ -434,5 +524,16 @@ html, body {
     .taller-drink img.resize-img {
         max-width: 300px;
     }
-    
+    .review-section {
+        width: 500px;
+    }  
+    .drink-videos {
+        padding: 10px;
+    }
+    .drinkvid {
+        width: 200px;
+        height: 300px;
+        object-fit: cover;
+    }
 }
+
