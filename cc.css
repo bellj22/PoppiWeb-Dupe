@@ -3,6 +3,20 @@
     padding: 0;
     box-sizing: border-box;
 }
+@font-face {
+  font-family: 'Recoleta';
+  src: url('./fonts/Recoleta-Bold.ttf') format('truetype');
+  font-weight: bolder;
+  font-style: cursive;
+}
+@keyframes scroll-text {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 
 html, body {
     overflow-x: hidden;
@@ -15,9 +29,8 @@ html, body {
     padding: 24px 0;
     top: 0;
     border-radius:  0 0 20px 20px;
-    box-shadow: 0 10px 30px -10px #fd303a;
+    box-shadow: 0 20px 50px -10px #fd303a;
 }
-
 
 .logo {
     position: absolute;
@@ -65,7 +78,7 @@ html, body {
     gap: 20px;
     max-width: 1200px;
     margin: 40px auto;
-    padding: 10px 50px;
+    padding: 20px;
     align-items: flex-start;
 }
 .cc-left {
@@ -97,19 +110,59 @@ html, body {
     flex: 1;
     flex-direction: column;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 150px;
+    align-items: center;
+    justify-content: center;
+}
+.banner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+    z-index: 100;
+    height: 30px;
+    border-radius: 5px 5px;
+    border: 1.66667px solid #fd303a;
+    color: #700058;
+}
+.banner-wrap {
+    padding: 0 5px; 
+    margin-bottom: 30px;
+    width: 400px;
+    box-sizing: border-box;
+}
+.banner-track {
+  display: flex;
+  animation: scroll-text 20s linear infinite;
+}
+.banner-track span {
+  white-space: nowrap;
+  font-size: 20px;
+  padding: 0 5px;
+  font-family: 'Recoleta', serif;
+  font-weight: 500;
+  color: #fd303a;
+}
+.banner-track span svg {
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    
 }
 .soda-name {
     font-size: 50px;
     color: #fd303a;
-    font-family: 'Baloo 2',sans-serif;
-    font-weight: bold;
+    font-family: 'Recoleta', serif;
+    font-weight: 600;
     margin-bottom: 10px;
     text-align: center;
 }
 .soda-description {
-    font-size: 18px;
-    font-family: 'Golos Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    font-family: 'Golos Text', sans-serif;
     color: #fd303a;
     text-align: center;
     align-items: center;
@@ -155,47 +208,68 @@ html, body {
     margin-top: 20px;
 }
 
-.soda-info {
-    width: 100%;
-    overflow: hidden;
-}
-.middle-section {
-    background-color:white;
-    padding: 90px;
-    margin-top: -21.9px;
-}
-
 /* Flavors Choice Selection */
-
+.soda-flavors-selection {
+    display: flex;
+    margin-top: 50px;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+}
 .arrow {
     background: none;
     border: none;
     cursor: pointer;
-    width: 48px;
-    height: 48px;
+    padding: 0;
+    flex-shrink: 0;
+    margin-top: 20px;
+}
+
+.arrow svg circle {
+    fill: #fd303a;
+}
+.arrow svg path {
+    fill: #700058;
+}
+.arrow:hover svg circle {
+    fill: #700058;
+    stroke: #fd303a;
+    stroke-width: 1.67px;
+}
+.arrow:hover svg path {
+    fill: #fd303a;
+}
+
+.flavors-carousel {
+    overflow-x: hidden;
+    display: flex;
+    max-width: 400px;
+    flex-shrink: 1;
+    position: relative;
 }
 .flavor-icons {
     display: flex;
     gap: 5px;
-    justify-content: center;
     margin-top: 20px;
+    flex-wrap: nowrap;
 }
 .flavor-icons a {
     display: flex;
     justify-content: center;
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
     align-items: center;
     background-color: #e5fc11;
     border-radius: 5px;
+    text-decoration: none;
     
 }
 .flavor-icons a.active {
-  border: 1.5px solid #fd303a;   /* red border on the active box */
+  border: 2px solid #fd303a; 
 }
 .flavor-icons img {
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     object-fit: contain;
 }
 
@@ -211,3 +285,52 @@ html, body {
 .flavor-icons a:nth-child(9) {background-color:#700058;}
 .flavor-icons a:nth-child(10) {background-color:#f66ff8;}
 
+.soda-info {
+    width: 100%;
+    overflow: hidden;
+}
+.middle-section {
+    background-color:white;
+    padding: 90px;
+    margin-top: -21.9px;
+}
+
+@media (max-width: 768px) {
+    .cherry-cola {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 20px;
+    }
+    .cc-left {
+        max-width: 100%;
+        align-items: center;
+        flex: unset;
+    }
+    .large-img {
+        max-height: 500px;
+        max-width: 400px;
+    }
+    .small-img img {
+        width: 200px;
+        height: 200px;
+    }
+    .cc-right {
+        margin-top: 40px;
+        width: 100%;
+        max-width: 500px;
+    }
+    .soda-name {
+        font-size: 40px;
+    }
+    .soda-description {
+        font-size: 16px;
+    }
+    .middle-section {
+        padding: 60px;
+        margin-top: -10px;
+    }
+    .banner-wrap {
+        width: 400px;
+        align-items: center;
+    }
+}

@@ -1,0 +1,66 @@
+html, body {
+    background-color: #ec008c;
+}
+
+.poppi-header {
+    background-color: #ec008c;
+    box-shadow: 0 20px 50px -10px #fff200 !important;
+}
+
+.nav-left a{
+    color: #fff200;
+}
+.nav-left a:hover {
+    text-decoration-color: #fff200;
+}
+.banner {
+    border: 1.66667px solid #fff200;
+    color: #ec008c;
+}
+.banner-track span {
+    color: #fff200;
+}
+.soda-name, .soda-description {
+    color: #fff200;
+}
+.shopnow-btn {
+    color: #fff200;
+    border: 1.66667px solid #fff200;
+    background-color: #ec008c;
+    box-shadow: 5px 5px 0 0 #fff200;
+}
+.shopnow-btn:hover {
+    color: #ec008c;
+    background-color: #fff200;
+}
+.arrow svg circle {
+    fill: #fff200;
+}
+.arrow svg path {
+    fill: #ec008c;
+}
+.arrow:hover svg circle {
+    fill: #ec008c;
+    stroke: #fff200;
+}
+.arrow:hover svg path {
+    fill: #fff200;
+}
+.flavor-icons a.active {
+  border: 2px solid #fff200;
+}
+.large-img img {
+    max-height: 500px;
+    max-width: 500px;
+}
+
+@media (max-width: 768px) {
+    .large-img {
+        max-height: 500px;
+        max-width: 400px;
+    }
+    .small-img img {
+        width: 180px;
+        height: 200px;
+    }
+}
